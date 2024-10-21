@@ -1,3 +1,5 @@
+//A number guess game with Password
+
 #include <iostream>
 #include <fstream>
 #include <string>

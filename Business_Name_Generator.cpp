@@ -36,50 +36,52 @@ Hub
 using namespace std;
 int RandomNumber()
 {
-    srand(time(0));
     int random_number = rand() % 100 + 1;
     return random_number;
 }
 int main()
 {
+    srand(time(0));
+    string first, second, third;
+    int rnum = RandomNumber();
+    if(rnum>=1 && rnum<=33){
+    first = "Crazy";
+    }
+    else if(rnum>=34 && rnum<=66){
+    first = "Amazing";
+    }
+    else{
+    first = "Fire";
+    }
+    rnum = RandomNumber();
+    if (rnum >= 1 && rnum <= 33)
+    {
+        second = "Engine";
+    }
+    else if (rnum >= 34 && rnum <= 66)
+    {
+        second = "Foods";
+    }
+    else
+    {
+        second = "Garments";
+    }
+    rnum = RandomNumber();
+    if (rnum >= 1 && rnum <= 33)
+    {
+        third = "Bros";
+    }
+    else if (rnum >= 34 && rnum <= 66)
+    {
+        third = "Limited";
+    }
+    else
+    {
+        third = "Hub";
+    }
 
-    string firstName, secondName, thirdName;
-    if (RandomNumber() >= 1 && RandomNumber() <= 33)
-    {
-        firstName = "Crazy";
-    }
-    else if (RandomNumber() >= 34 && RandomNumber() <= 66)
-    {
-        firstName = "Amazing";
-    }
-    else
-    {
-        firstName = "Fire";
-    }
-    if(RandomNumber() >= 1 && RandomNumber() <= 33)
-    {
-        secondName = "Engine";
-    }
-    else if (RandomNumber() >= 34 && RandomNumber() <= 66)
-    {
-        secondName = "Foods";
-    }
-    else
-    {
-        secondName = "Garments";
-    }
-    if(RandomNumber() >= 1 && RandomNumber() <= 33)
-    {
-        thirdName = "Bros";
-    }
-    else if (RandomNumber() >= 34 && RandomNumber() <= 66)
-    {
-        thirdName = "Limited";
-    }
-    else
-    {
-        thirdName = "Hub";
-    }
-    cout << "Business Name: " << firstName << " " << secondName << " " << thirdName << endl;
+    cout << "Business Name: " << first << " " << second << " " << third << endl;
+    
+    
     return 0;
 }
